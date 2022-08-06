@@ -2,11 +2,11 @@ import { createRouter, createWebHashHistory } from "vue-router";
 const routes = [
     {
         path: '/',
-        component: () => import("@/views/home/home") 
+        component: () => import("@/test/views/home/home") 
     },
     {
         path: '/me',
-        component: () => import("@/views/me/me") 
+        component: () => import("@/test/views/me/me") 
     }
 ]
 export default createRouter({

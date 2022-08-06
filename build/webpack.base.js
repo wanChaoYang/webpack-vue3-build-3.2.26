@@ -2,11 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
+const webConfig = require("../config/webConfig")
 
 module.exports = {
-    entry: "./src/main.js",
+    entry: `./src/${webConfig.name}/main.js`,
     output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, `../dist/${webConfig.name}`),
         filename: 'js/[name].bundle.js',
     },
 
@@ -61,7 +62,7 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            "@": path.resolve(__dirname, "../src")
+            "@": path.resolve(__dirname, `../src`)
         },
         extensions: [ '.js', '.vue' ],//这三种文件格式可以不写后缀名
         modules: [ "node_modules" ]

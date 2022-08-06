@@ -2,7 +2,7 @@
   <div class="a">Home</div>
   <div class="b">还的哈</div>
   <div>
-    <img src="@/assets/imgs/5.jpg" alt />
+    <img src="@/test/assets/imgs/5.jpg" alt />
   </div>
 </template>
 <script>
